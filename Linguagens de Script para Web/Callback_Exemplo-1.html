@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teste JavaScript</title>
+</head>
+<body>
+
+<script>
+
+function saudacao(nome, callback) {
+  console.log("Olá " + nome);
+  callback();  // chama a função passada como argumento
+}
+
+saudacao("Maria", () => {
+  console.log("Seja bem-vinda!");
+});
+
+
+</script>
+
+</body>
+</html>

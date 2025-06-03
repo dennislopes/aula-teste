@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teste JavaScript</title>
+</head>
+<body>
+
+<script>
+
+const promessa = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const sucesso = true;
+    if (sucesso) {
+      resolve("Deu tudo certo!");
+    } else {
+      reject("Algo deu errado.");
+    }
+  }, 5000);
+});
+
+promessa
+  .then(resultado => console.log("Sucesso:", resultado))
+  .catch(erro => console.error("Erro:", erro));
+//console.log("Hello World");
+
+
+
+</script>
+
+</body>
+</html>

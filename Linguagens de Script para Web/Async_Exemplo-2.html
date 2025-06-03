@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teste JavaScript</title>
+</head>
+<body>
+<script>
+
+function buscarDadosDoServidor() {
+    return new Promise((resolve, reject) => {
+        console.log("Buscando dados...");
+        setTimeout(() => {
+            resolve({ nome: "João", idade: 30 });
+        }, 2000);
+    });
+}
+
+async function processarDados() {
+    console.log("Iniciando processamento...");
+    const dados = await buscarDadosDoServidor();
+    console.log("Dados recebidos:", dados);
+    console.log(`Nome: ${dados.nome}, Idade: ${dados.idade}`);
+    console.log("Processamento concluído.");
+}
+
+processarDados();
+console.log("Este log aparece antes dos dados serem recebidos!");
+
+</script>
+</body>
+</html>

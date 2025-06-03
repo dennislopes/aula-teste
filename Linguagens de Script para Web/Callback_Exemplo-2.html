@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teste JavaScript</title>
+</head>
+<body>
+
+<script>
+
+function esperarEExecutar(callback) {
+  setTimeout(() => {
+    console.log("Esperou 2 segundos...");
+    callback();
+  }, 2000);
+}
+
+esperarEExecutar(() => {
+  console.log("Callback executado após espera");
+});
+
+
+
+</script>
+
+</body>
+</html>
